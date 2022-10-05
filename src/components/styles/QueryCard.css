@@ -1,0 +1,51 @@
+
+
+
+.query-card {
+    width : 50%;
+    background-color : rgba(0,0,0,0.6);
+    color : white;
+    border-radius : 10px;
+}
+
+.text-ctn {
+    text-align : center;
+    margin : 8px;
+}
+
+.title {
+    color : gold;
+    font-size : 30px;
+    margin : 0;
+}
+
+.subheading {
+    margin : 0;
+    font-size : 17px;
+}
+
+.input {
+    width : 50%;
+    display : block;
+    text-align : center;
+}
+
+.poke-search-box {
+    margin : 15px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+.search-btn {
+    margin-left : 20px;
+}
+
+.gg-pokemon {
+    margin-left : 7.5px;
+}
+
+.not-found-txt {
+    margin : 15px;
+    text-align: center;
+}
