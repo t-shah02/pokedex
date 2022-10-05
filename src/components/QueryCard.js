@@ -13,6 +13,7 @@ export default function QueryCard() {
   const [invalidQuery, setInvalidQuery] = useState("")
   const [result, setResult] = useState({})
   const [loaded, setLoaded] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
 
@@ -60,6 +61,7 @@ export default function QueryCard() {
       return
     }
 
+    setLoading(true)
     const response = await fetch(`${BASE_URL}/${query}`)
 
     if (response.ok) {
@@ -91,6 +93,8 @@ export default function QueryCard() {
       setLoaded(true);
     }
 
+    setLoading(false)
+
   }
 
   return (
@@ -109,6 +113,7 @@ export default function QueryCard() {
         </button>
       </div>
 
+       {loading ? <div className="lds-facebook"><div></div><div></div><div></div></div> : null}
 
       {loaded ? (result ? <PokemonCard data={result}/> : <h1 className="not-found-txt"> A pokemon called {invalidQuery} does not exist! </h1>) : null}
 
